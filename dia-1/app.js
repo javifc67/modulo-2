@@ -3,19 +3,15 @@
  * practicar Javascript!
  */
 
-console.log("Probando, probando, 1, 2, 3!");
+let n = 1477500;
 
-let nombre;
-nombre = "javier";
-let apellido = "Ferre";
+nextPrime: for (let i = 2; i <= n; i++) {
+  // for each i...
 
-//alert("hola" + " mi nombre es " + nombre + " " + apellido);
+  for (let j = 2; j < i; j++) {
+    // look for a divisor..
+    if (i % j == 0) continue nextPrime; // not a prime, go next i
+  }
 
-let admin;
-let name;
-name = "john";
-admin = name;
-alert(admin);
-
-let OurplanetName = "Earth";
-let visitor;
+  document.write(i + "\n"); // a prime
+}
