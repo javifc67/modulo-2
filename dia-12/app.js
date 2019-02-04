@@ -189,11 +189,11 @@ alert(getLocalDay(date));
 // }
 // getSecondsToday()
 
-/* function getSecondsToTomorrow() {
+function getSecondsToTomorrow() {
   let date = new Date(Date.now());
   let dateT = new Date(Date.now());
 
-  dateT.setHours(23, 59, 59);
+  dateT.setHours(24, 60, 60);
 
   s = date.getHours() * 3600;
 
@@ -202,7 +202,6 @@ alert(getLocalDay(date));
   st = dateT.getHours() * 3600;
   st += dateT.getMinutes() * 60;
 
-  alert(st - (s - 1));
+  alert(st - s);
 }
 getSecondsToTomorrow();
- */
