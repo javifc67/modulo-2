@@ -153,3 +153,56 @@ alert(getWeekDay(date));
 let date = new Date(2012, 0, 3);
 alert(getLocalDay(date));
  */
+
+// function getDateAgo(date, days){
+//  dateDiff = +date - (days * 86400000)
+//  let date2 = new Date(dateDiff)
+//   return  date2.getDate()
+// }
+
+// let date = new Date(2015, 0, 2);
+
+// alert(getDateAgo(date, 1)); // 1, (1 Jan 2015)
+// alert(getDateAgo(date, 2)); // 31, (31 Dec 2014)
+// alert(getDateAgo(date, 365));
+
+
+
+// function getLastDayOfMonth(year, month){
+//   let lastDay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+//   lastDay = lastDay[month]
+//   if(0 == year % 4){
+//     lastDay = 29;
+//   }
+//  return lastDay
+// }
+
+// alert(getLastDayOfMonth(2012, 1));
+
+// function getSecondsToday (){
+//   let date = new Date(Date.now())
+//   ms = (date.getHours() * 3600000)
+//   ms+= (date.getMinutes() * 60000)
+//   ms+= (date.getSeconds() *1000)
+//   ms+= date.getMilliseconds()
+
+//   alert(ms)
+   
+// }
+// getSecondsToday()
+
+
+function getSecondsToTomorrow(){
+  let date = new Date(Date.now())
+  let dateT = new Date(Date.now())
+  dateT = date.setDate(date.getDate() + 1)
+  dateT = date.setHours( 0[0,0,0])
+    s = (date.getHours() * 3600000)
+    s+= (date.getMinutes() * 60000)
+    s+= (date.getSeconds() *1000)
+    st = (dateT.getHours() * 3600000)
+    st+= (dateT.getMinutes() * 60000)
+    st+= (dateT.getSeconds() *1000)
+    return s-st
+}
+getSecondsToTomorrow();
